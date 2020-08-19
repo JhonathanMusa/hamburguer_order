@@ -15,12 +15,13 @@
         <p>Hamburguesa Doble</p>
         <p>Hamburguesa Triple</p>
       </aside>
-      <div class="display">
-        <input type="text" id="pedido" /><br />
-        <input type="number" id="cantidad" /><br />
-        <button type="button">Terminar</button><br />
-        <span id="total"></span>
-      </div>
+      <form name="formulario" method="GET" class="display">
+        <input type="text" name="pedido" id="pedido" /><br />
+        <input type="number" name="cantidad" id="cantidad" /><br />
+        <input type="checkbox" name="terminos" id="terminos" /> Terminos y
+        condiciones<br />
+        <input type="submit" id="btn" name="btn" value="Terminar" />
+      </form>
     </div>
     <script src="main.js"></script>
   </body>
