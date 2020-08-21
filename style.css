@@ -1,6 +1,7 @@
 body {
   text-align: center;
   font-family: sans-serif;
+  background: #333;
 }
 
 h1 {
@@ -9,9 +10,13 @@ h1 {
 
 .container {
   width: 80%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
+  border-radius: 5px;
   margin: 0 auto;
   display: flex;
+  background: linear-gradient(to right, rgb(153, 0, 255), rgb(0, 195, 255));
+  color: #eee;
 }
 
 .menu_dia {
@@ -26,7 +31,8 @@ h1 {
 .display input {
   margin: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(175, 174, 174);
+  /* border: 1px solid rgb(175, 174, 174); */
+  border: none;
   padding: 10px;
   color: rgb(107, 105, 105);
 }
@@ -34,4 +40,3 @@ h1 {
 .display button {
   margin: 5px;
 }
-
