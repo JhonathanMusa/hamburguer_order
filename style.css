@@ -40,3 +40,11 @@ h1 {
 .display button {
   margin: 5px;
 }
+
+#btn {
+  cursor: pointer;
+}
+
+#btn:hover {
+  opacity: 0.9;
+}

@@ -17,7 +17,7 @@ const validar = (e) => {
     // impide que la pagina se actualice despues de validar
     e.preventDefault();
   }
-
+ 
   // valida si se ingresa una cantidad de elementos
   if (cantidad == 0) {
     alert("La cantidad no puede estar vacia");
