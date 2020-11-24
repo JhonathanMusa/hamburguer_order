@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="flex-container">
       <h1>La Delicia</h1>
       <aside class="menu_dia">
         <h3>Menu del dia:</h3>
@@ -15,13 +15,13 @@
         <p>Hamburguesa Doble</p>
         <p>Hamburguesa Triple</p>
       </aside>
-      <form name="formulario" class="display">
-        <input type="text" name="pedido" id="pedido" autofocus /><br />
-        <input type="number" name="cantidad" id="cantidad" /><br />
-        <input type="checkbox" name="terminos" id="terminos" /> Terminos y
+      <form name="formulario" class="form">
+        <input type="text" class="formulario__input" name="pedido" id="pedido"  /><br />
+        <input type="number" class="formulario__input" name="cantidad" id="cantidad" /><br />
+        <input type="checkbox" class="formulario__input" name="terminos" id="terminos" /> Terminos y
         condiciones<br />
-        <input type="button" id="btn" value="Terminar" /><br />
-        <input type="text" name="resultado" class="resultado" />
+        <input type="button" class="formulario__button" id="btn" value="Terminar" /><br />
+        <input type="text" class="formulario__input" name="resultado" class="resultado" />
       </form>
     </div>
     <script src="main.js"></script>
