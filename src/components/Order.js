@@ -13,15 +13,18 @@ export default function Order() {
   };
 
   return (
-    <div className="container">
-      <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler}>
+      <div className="form-group">
         <input
+          className="form-control"
           type="text"
           placeholder="What do you want?"
           onChange={inputHandler}
         />
-        <button type="submit">Order</button>
-      </form>
-    </div>
+      </div>
+      <button className="btn btn-success btn-block" type="submit">
+        Order
+      </button>
+    </form>
   );
 }

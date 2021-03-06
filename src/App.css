@@ -1,7 +1,33 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu-container {
+  width: 600px;
+  height: 200px;
+  margin: auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.menu-container > h1{
+  position: absolute;
+  z-index: 1;
+}
+
+.elements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  text-align: center;
 }
 
 input[type="text"] {
@@ -12,9 +38,18 @@ input[type="text"] {
   border: 1px solid #aaa;
 }
 
-button[type="submit"]{
+input[type="text"]:focus {
+  border: 2px solid #ddd;
+}
+
+button[type="submit"] {
   width: 100px;
-  height: 34px;
+  height: 30px;
   border-radius: 5px;
   border: 1px solid #aaa;
 }
+
+button[type="submit"]:hover {
+  background-color: #ddd;
+}
+ */
