@@ -16,14 +16,14 @@ export default function Order() {
     <form onSubmit={submitHandler}>
       <div className="form-group">
         <input
-          className="form-control"
+          className="form-control mt-3"
           type="text"
           placeholder="What do you want?"
           onChange={inputHandler}
         />
       </div>
-      <button className="btn btn-success btn-block" type="submit">
-        Order
+      <button className="btn btn-primary btn-block" type="submit">
+        Send
       </button>
     </form>
   );
