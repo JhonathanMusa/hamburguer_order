@@ -7,7 +7,7 @@ const ordersModel = new Schema(
       type: String,
       require: true,
     },
-    total: {
+    cost: {
       type: Number,
       require: true,
     },

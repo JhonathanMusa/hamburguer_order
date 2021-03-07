@@ -1,32 +1,45 @@
 import React from "react";
+import dataMenu from "../dataMenu.js";
 
 export default function Menu(props) {
   return (
     <div className="container fluid text-center">
       <div className="row">
         <div className="col-sm">
-          <h4>Hamburguers</h4>
-          <span>Monster</span>
-          <br />
-          <span>Quarter</span>
+          <h4>Hamburger</h4>
+          {dataMenu.products.hamburger.map((product) => (
+            <div key={product._id}>
+              <span>{product.name} </span>
+              <span>${product.price}</span>
+            </div>
+          ))}
         </div>
         <div className="col-sm">
           <h4>Hot Dogs</h4>
-          <span>American</span>
-          <br />
-          <span>traditional</span>
+          {dataMenu.products.hotDogs.map((product) => (
+            <div key={product._id}>
+              <span>{product.name} </span>
+              <span>${product.price}</span>
+            </div>
+          ))}
         </div>
         <div className="col-sm">
-          <h4>Pizzas</h4>
-          <span>Napolitan</span>
-          <br />
-          <span>Double Cheese</span>
+          <h4>Additionals</h4>
+          {dataMenu.products.additionals.map((product) => (
+            <div key={product._id}>
+              <span>{product.name} </span>
+              <span>${product.price}</span>
+            </div>
+          ))}
         </div>
         <div className="col-sm">
           <h4>Drinks</h4>
-          <span>Cola</span>
-          <br/>
-          <span>Soda</span>
+          {dataMenu.products.drinks.map((product) => (
+            <div key={product._id}>
+              <span>{product.name} </span>
+              <span>${product.price}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
