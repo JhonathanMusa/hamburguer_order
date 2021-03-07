@@ -5,11 +5,11 @@ const ordersModel = new Schema(
   {
     product: {
       type: String,
-      require: true,
+      required: true,
     },
     cost: {
       type: Number,
-      require: true,
+      required: true,
     },
   },
   { timestamps: true }
