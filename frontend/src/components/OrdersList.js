@@ -13,7 +13,6 @@ export default function OrdersList() {
         console.log(error);
       });
   }, [setListOrders]);
-
   return (
     <div>
       <h1>Orders List</h1>

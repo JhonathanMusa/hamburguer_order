@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-export default function Order() {
+export default function Order(props) {
   const [userOrder, setUserOrder] = useState([]);
 
   const inputHandler = (e) => {
