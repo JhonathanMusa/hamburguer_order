@@ -1,18 +1,18 @@
-import Axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { listOrders } from "../redux/actions/orderActions";
+import LoadingBox from "./LoadingBox";
+import MessageBox from "./MessageBox";
 
 export default function OrdersList() {
-  const [listOrders, setListOrders] = useState([]);
+  const dispatch = useDispatch();
+  const orderList = useSelector((state) => state.orderList);
+  const { loading, error, orders } = orderList;
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/orders")
-      .then((response) => {
-        setListOrders(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [setListOrders]);
+    dispatch(listOrders());
+  }, [dispatch]);
+
   return (
     <div>
       <h1>Orders List</h1>
@@ -25,13 +25,21 @@ export default function OrdersList() {
           </tr>
         </thead>
         <tbody>
-          {listOrders.map((order, index) => (
-            <tr key={order._id}>
-              <td>{index + 1}</td>
-              <td>{order.product}</td>
-              <td>${order.cost}</td>
-            </tr>
-          ))}
+          {loading ? (
+            <LoadingBox></LoadingBox>
+          ) : error ? (
+            <MessageBox>{error}</MessageBox>
+          ) : (
+            <div>
+              {orders.map((order, index) => (
+                <tr key={order._id}>
+                  <td>{index + 1}</td>
+                  <td>{order.product}</td>
+                  <td>${order.cost}</td>
+                </tr>
+              ))}
+            </div>
+          )}
         </tbody>
       </table>
     </div>

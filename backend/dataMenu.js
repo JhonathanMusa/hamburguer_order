@@ -29,7 +29,7 @@ const data = {
     },
     {
       name: "Fries",
-      category: "Addittionals",
+      category: "Additionals",
       price: 2.5,
     },
 
