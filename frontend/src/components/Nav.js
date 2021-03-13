@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Menu from "./Menu";
 import Order from "./Order";
+import Menu from "./Menu";
 import OrdersList from "./OrdersList";
 
 export default function Nav() {

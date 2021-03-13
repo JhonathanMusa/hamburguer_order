@@ -30,7 +30,7 @@ export default function OrdersList() {
           ) : error ? (
             <MessageBox>{error}</MessageBox>
           ) : (
-            <div>
+            <>
               {orders.map((order, index) => (
                 <tr key={order._id}>
                   <td>{index + 1}</td>
@@ -38,7 +38,7 @@ export default function OrdersList() {
                   <td>${order.cost}</td>
                 </tr>
               ))}
-            </div>
+            </>
           )}
         </tbody>
       </table>
