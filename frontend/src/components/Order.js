@@ -20,6 +20,9 @@ export default function Order(props) {
       });
 
     console.log(userOrder);
+    alert("Your order was register successfully");
+    document.querySelectorAll("input");
+    setUserOrder("");
   };
 
   return (

@@ -24,8 +24,9 @@ export default function Menu() {
           <div className="col-sm">
             {products.map((product, index) => (
               <div key={index}>
-                <span>{product.name} </span>
-                <span>${product.price}</span>
+                <span className="menu-item">
+                  {product.name} ${product.price}
+                </span>
               </div>
             ))}
           </div>
